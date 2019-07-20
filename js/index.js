@@ -6,3 +6,5 @@ mainNav.forEach(navItem =>
         navItem.style.cursor = "help"
     )
 );
+
+const funBus = document.querySelector(".intro img");
