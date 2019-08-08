@@ -68,8 +68,21 @@ function reportWindowSize() {
 }
 
 // Click
-const advImg = document.querySelector(".img-content");
-
-advImg.addEventListener("click", event => {
+const advImg = document.querySelector(".img-content img");
+advImg.addEventListener("click", (event) => {
     advImg.style.borderRadius = "50%";
 });
+
+// Double Click
+const boatImg = document.querySelector(".inverse-content img");
+
+boatImg.addEventListener("dblclick", event => {
+    boatImg.style.borderRadius = "0";
+})
+
+// Mouse Over
+const boatBeachImg = document.querySelector(".content-destination img");
+
+boatBeachImg.addEventListener("mouseover", event => {
+    boatBeachImg.style.borderRadius = "25%";
+})
