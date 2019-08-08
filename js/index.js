@@ -37,3 +37,39 @@ function zoom(event) {
 let scale = 1;
 
 // Drag
+const busPic = document.querySelector("header img");
+const body = document.querySelector("body");
+
+busPic.addEventListener("drag", function(event) {
+    body.style.color = "red";
+})
+
+// Dragend
+busPic.addEventListener("dragend", function(event) {
+    event.preventDefault();
+    event.target = document;
+    body.style.color = "black";
+})
+
+// Load
+window.addEventListener('load', (event) => {
+    console.log('Congratulations to meet you!');
+});
+
+// Resize
+window.addEventListener('resize', reportWindowSize);
+
+const heightOutput = document.querySelector('#height');
+const widthOutput = document.querySelector('#width');
+
+function reportWindowSize() {
+    heightOutput.textContent = window.innerHeight;
+    widthOutput.textContent = window.innerWidth;
+}
+
+// Click
+const advImg = document.querySelector(".img-content");
+
+advImg.addEventListener("click", event => {
+    advImg.style.borderRadius = "50%";
+});
