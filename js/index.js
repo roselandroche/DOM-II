@@ -7,13 +7,23 @@ mainNav.forEach(navItem =>
     )
 );
 // Keydown
-const header = document.querySelector("header");
+const title = document.querySelector(".logo-heading");
 
 document.addEventListener("keydown", makeYellow);
 
 function makeYellow(event) {
     if(event.keyCode === 89) {
-        header.style.backgroundColor = "yellow";
+        title.style.backgroundColor = "yellow";
+    }
+}
+
+const header = document.querySelector("header");
+
+document.addEventListener("keydown", makeBlue);
+
+function makeBlue(event) {
+    if(event.keyCode === 66) {
+        header.style.backgroundColor = "blue";
     }
 }
 
@@ -24,12 +34,9 @@ document.addEventListener("wheel", zoom);
 
 function zoom(event) {
     event.preventDefault;
-
     scale += event.deltaY * -0.01;
-
     // Restrict scale
     scale = Math.min(Math.max(.125, scale), 4);
-
   // Apply scale transform
     page.style.transform = `scale(${scale})`;
 }
