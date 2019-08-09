@@ -13,6 +13,7 @@ document.addEventListener("keydown", makeYellow);
 
 function makeYellow(event) {
     if(event.keyCode === 32) {
+        event.preventDefault();
         title.style.backgroundColor = "yellow";
     }
 }
@@ -23,6 +24,7 @@ document.addEventListener("keyup", makeBlue);
 
 function makeBlue(event) {
     if(event.keyCode === 32) {
+        event.preventDefault();
         header.style.backgroundColor = "blue";
     }
 }
