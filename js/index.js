@@ -92,7 +92,6 @@ function reportWindowSize() {
 // Click
 const advImg = document.querySelector(".img-content img");
 advImg.addEventListener("click", (event) => {
-    // advImg.style.borderRadius = "50%";
     TweenMax.from(advImg, 5, {rotation: 360, scale:2});
 });
 
