@@ -1,11 +1,18 @@
 // Your code goes here
-// Mouseover
+// Click
 const mainNav = document.querySelectorAll("a");
 mainNav.forEach(navItem => 
-    navItem.addEventListener("mouseover", (event) => 
+    navItem.addEventListener("mouseover", (event) =>
         navItem.style.cursor = "help"
     )
 );
+
+// Mouseover
+const mainNavBlock = document.querySelector(".main-navigation");
+mainNavBlock.addEventListener("click", (event) => {
+    mainNavBlock.style.backgroundColor = "lime";
+})
+
 // Keydown
 const title = document.querySelector(".logo-heading");
 
@@ -17,7 +24,7 @@ function makeYellow(event) {
         title.style.backgroundColor = "yellow";
     }
 }
-
+// Key Up
 const header = document.querySelector("header");
 
 document.addEventListener("keyup", makeBlue);
@@ -89,9 +96,17 @@ boatImg.addEventListener("dblclick", event => {
     boatImg.style.borderRadius = "0";
 })
 
-// Mouse Over
+// Mouse Down
 const boatBeachImg = document.querySelector(".content-destination img");
 
-boatBeachImg.addEventListener("mouseover", event => {
+boatBeachImg.addEventListener("mousedown", event => {
     boatBeachImg.style.borderRadius = "25%";
+    event.stopPropagation();
+})
+
+// Mouse Down
+const behindBoatBeach = document.querySelector(".content-destination");
+
+behindBoatBeach.addEventListener("mousedown", (event) => {
+    behindBoatBeach.style.backgroundColor = "orange";
 })
