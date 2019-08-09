@@ -1,5 +1,11 @@
 // Your code goes here
-// Click
+const navOne = document.querySelector("a");
+navOne.addEventListener("click", (event) => {
+    navOne.style.color = "purple";
+    event.preventDefault();
+});
+
+// Click 1
 const mainNav = document.querySelectorAll("a");
 mainNav.forEach(navItem => 
     navItem.addEventListener("mouseover", (event) =>
@@ -7,13 +13,13 @@ mainNav.forEach(navItem =>
     )
 );
 
-// Mouseover
+// Mouseover 2
 const mainNavBlock = document.querySelector(".main-navigation");
 mainNavBlock.addEventListener("click", (event) => {
     mainNavBlock.style.backgroundColor = "lime";
 })
 
-// Keydown
+// Keydown 3
 const title = document.querySelector(".logo-heading");
 
 document.addEventListener("keydown", makeYellow);
@@ -24,7 +30,7 @@ function makeYellow(event) {
         title.style.backgroundColor = "yellow";
     }
 }
-// Key Up
+// Key Up 4
 const header = document.querySelector("header");
 
 document.addEventListener("keyup", makeBlue);
@@ -36,7 +42,7 @@ function makeBlue(event) {
     }
 }
 
-// Wheel
+// Wheel 5
 const page = document.querySelector("body");
 
 document.addEventListener("wheel", zoom);
@@ -52,7 +58,7 @@ function zoom(event) {
 
 let scale = 1;
 
-// Drag
+// Drag 6
 const busPic = document.querySelector("header img");
 const body = document.querySelector("body");
 
@@ -60,19 +66,19 @@ busPic.addEventListener("drag", function(event) {
     body.style.color = "red";
 })
 
-// Dragend
+// Dragend 7
 busPic.addEventListener("dragend", function(event) {
     event.preventDefault();
     event.target = document;
     body.style.color = "black";
 })
 
-// Load
+// Load 8
 window.addEventListener('load', (event) => {
     console.log('Congratulations to meet you!');
 });
 
-// Resize
+// Resize 9
 window.addEventListener('resize', reportWindowSize);
 
 const heightOutput = document.querySelector('#height');
@@ -89,7 +95,7 @@ advImg.addEventListener("click", (event) => {
     advImg.style.borderRadius = "50%";
 });
 
-// Double Click
+// Double Click 10
 const boatImg = document.querySelector(".inverse-content img");
 
 boatImg.addEventListener("dblclick", event => {
