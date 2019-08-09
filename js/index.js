@@ -93,7 +93,7 @@ function reportWindowSize() {
 const advImg = document.querySelector(".img-content img");
 advImg.addEventListener("click", (event) => {
     // advImg.style.borderRadius = "50%";
-    TweenMax.to(advImg, 5, {rotation: 360, scale:2});
+    TweenMax.from(advImg, 5, {rotation: 360, scale:2});
 });
 
 // Double Click 10
