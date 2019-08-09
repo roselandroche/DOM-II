@@ -12,17 +12,17 @@ const title = document.querySelector(".logo-heading");
 document.addEventListener("keydown", makeYellow);
 
 function makeYellow(event) {
-    if(event.keyCode === 89) {
+    if(event.keyCode === 32) {
         title.style.backgroundColor = "yellow";
     }
 }
 
 const header = document.querySelector("header");
 
-document.addEventListener("keydown", makeBlue);
+document.addEventListener("keyup", makeBlue);
 
 function makeBlue(event) {
-    if(event.keyCode === 66) {
+    if(event.keyCode === 32) {
         header.style.backgroundColor = "blue";
     }
 }
