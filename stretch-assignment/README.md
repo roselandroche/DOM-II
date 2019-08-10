@@ -32,11 +32,11 @@ Topics:
   
   Rockets:
     
-  * Animate the rockets, visually show them being transported to the top.
+  * Animate the rockets (squares), visually show them being transported to the top.
   
   Travelers:
     
-  * Give the travelers a limit on the distance it can travel.
+  * Give the travelers (same squares?) a limit on the distance it can travel.
   * When the mouse button is released, it should travel back to its original position.
   * A mouse down that occurs during a transition back to the original position should send it traveling to the right again  from it's current position.
   
