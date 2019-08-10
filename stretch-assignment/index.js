@@ -1,4 +1,4 @@
-const allBlocks = document.querySelectorAll(".block");
+// const allBlocks = document.querySelectorAll(".block");
 
 const redBlock = document.querySelector(".block--red");
 redBlock.addEventListener("click", (event) => {
